@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "AddQuizManually";
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2 align="center" class="bg-danger"><font color="red"><em>Add Quiz...!</em></font></h2>
+<form class="container" align="center" action="/Admin/AddManually" method="post">
+    <input type="hidden" name="h1" id="h1" value=@ViewBag.x />
+ <font size="3"><strong>Question </strong> <input type="text" name="ques" id="q" /></font><br /><br />
+    <p><font size="3"><strong>Multiple Choices</strong></font></p>
+    <strong>A. </strong><input type="text" name="a" id="c1" />
+    &nbsp &nbsp <strong>B.</strong><input type="text" name="b" id="c2" /><br /><br />
+    <strong>C.</strong> <input type="text" name="c" id="c3" />
+    &nbsp &nbsp <strong>D. </strong><input type="text" name="d" id="c4" /><br /><br />
+    <p><font size="3"><strong>Correct Answer</strong></font></p>
+    <input type="text" name="correct" id="c" />
+    <br /><br />
+    <div align="center">
+        <input type ="submit" class="btn btn-primary" name="Submit" value="Add Quiz"/><br /><br />
+    </div> 
+</form>
+
+
+ 
+   

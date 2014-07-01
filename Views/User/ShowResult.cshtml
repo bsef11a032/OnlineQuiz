@@ -1,0 +1,18 @@
+﻿@model MvcApplication1.Models.Result
+
+@{
+    ViewBag.Title = "ShowResult";
+    Layout = "~/Views/User/_Layout.cshtml";
+}
+
+<h2 align="center" class="bg-danger"><font color="red"><em>Result...!</em></font></h2><br /><br />
+<div class="container">
+    <fieldset>
+        <font size="2" color="red">Username: </font>@Model.Username<br />
+        <font size="2" color="red">Quiz Category: </font>@Model.Category<br />
+        <font size="2" color="red">Total Questions: </font>@Model.TotalQuestions<br />
+        <font size="2" color="red">Correct Answers: </font>@Model.Correct<br />
+        <font size="2" color="red">Score: </font>@Model.Score<br />
+    </fieldset>
+</div>
+       

@@ -1,0 +1,29 @@
+﻿ @model MvcApplication1.Models.Quiz
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2  align="center" class="bg-danger"><font color="red"><em>Delete Quiz...!</em></font></h2><br /><br />
+<form class="container" method="post" action="/Admin/Delete?id="+ @Model.Id>
+<h4><strong>Are you sure you want to delete this?</strong></h4>
+    <font size="3"><strong>Question:</strong></font>
+    &nbsp&nbsp <font size="2">@Model.Question</font>
+    <br /><br />
+    <font size="2"><strong>Options:</strong></font>
+    <br />
+    <font size="2">
+    @Model.OptionA<br />
+    @Model.OptionB<br />
+    @Model.OptionC<br />
+    @Model.OptionD<br /></font>
+    <font size="2"><strong>Answer:</strong></font>
+    &nbsp&nbsp <font size="2">@Model.Correct</font><br />
+
+    @using (Html.BeginForm()) {
+         @Html.AntiForgeryToken()
+    <div align ="center">
+   <input type ="submit" class="btn btn-primary" name="Submit" value="Delete Quiz"/>
+        </div>
+    }
+</form>

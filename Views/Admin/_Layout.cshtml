@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <link href="~/bootstrap.css" rel="stylesheet"/>
+    <script src="~/bootstrap.js"></script>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <img src="~/Images/download.jpg"  width="1350" height="200"/>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><strong>Online Quiz</strong></a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="/Admin/Index"><strong>Home</strong></a></li>
+                <li class="active"><a href="/Admin/Help"><strong>Help</strong></a></li> 
+                <li class="active"><a href="#"><strong>Logout</strong></a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+   @RenderBody()
+   
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

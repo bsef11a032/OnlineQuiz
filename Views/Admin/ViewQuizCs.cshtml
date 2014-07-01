@@ -1,0 +1,51 @@
+﻿@model MvcApplication1.Models.Quiz
+
+@{
+    ViewBag.Title = "ViewQuizCS";
+     Layout = "~/Views/User/_Layout.cshtml";
+}
+
+<h2 align="center" class="bg-danger"><font color="red"><em>Computer Science Quiz...!</font></em></h2><br /><br />
+@using (Html.BeginForm("ViewQuizC", "Admin"))
+    {
+        <div class="container">
+            <fieldset>
+
+                <input type="hidden" name="h1" value="cs" />
+
+            <font size="3" face="Arial Black" color="red">Question: </font>
+            &nbsp&nbsp&nbsp<font size="2" face="Arial Black">
+               @Model.Question
+                    <br />
+                    <br />
+            </font>
+
+                <font size="3" face="Arial Black" color="green">Options: </font><br /><br />
+                <font size="2" face="Arial Black">
+               @Model.OptionA <br />
+               @Model.OptionB <br />
+               @Model.OptionC <br />
+               @Model.OptionD <br />
+                    <br />
+               
+                <font size="3" face="Arial Black" color="green">Answer </font>
+                <font size="2" face="Arial Black" color="red">
+               @Model.Correct
+                    </font>
+                    <br />
+            
+
+        </fieldset>
+            <div align ="center">
+                <font size="4">
+                    <strong>
+                        <input type="submit" value="NEXT" name="Hello"/>
+                    </strong>
+                </font>
+            </div>
+
+            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })           
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id })
+    </div>
+     
+    }

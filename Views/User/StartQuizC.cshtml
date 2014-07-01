@@ -1,0 +1,53 @@
+﻿@model MvcApplication1.Models.Quiz
+
+@{
+    ViewBag.Title = "StartQuizC";
+    Layout = "~/Views/User/_Layout.cshtml";
+}
+
+<h2 align="center" class="bg-danger"><font color="red"><em>Computer Science Quiz...!</em></font></h2><br /><br />
+@using (Html.BeginForm("StartQuizC", "User"))
+    {
+        <div class="container">
+            <fieldset>
+            <br />
+
+                <input type="hidden" name="h1" value="cs">
+
+            <font size="3" face="Arial Black" color="green">
+               @Model.Question
+                    <br />
+               
+            </font>
+            <br />
+            <font size="2" face="Arial Black" color="black">
+                <input type="radio" name="ans" value="A">
+                    @Model.OptionA
+            </font>
+             <br />
+            <font size="2" face="Arial Black" color="black">
+                <input type="radio" name="ans" value="B">
+                    @Model.OptionB
+            </font>
+             <br />
+            <font size="2" face="Arial Black" color="black">
+                <input type="radio" name="ans" value="C">
+                    @Model.OptionC
+            </font>
+             <br />
+            <font size="2" face="Arial Black" color="black">
+                <input type="radio" name="ans" value="D">
+                    @Model.OptionD
+            </font>
+        </fieldset>
+            <div align ="center">
+                <font size="4">
+                    <strong>
+                        <input type="submit" value="NEXT" name="Hello"/>
+                    </strong>
+                </font>
+            </div>
+    </div>
+     
+    }
+

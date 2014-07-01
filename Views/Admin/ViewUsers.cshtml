@@ -1,0 +1,46 @@
+﻿@model List<MvcApplication1.Models.UserInfo>
+
+@{
+    ViewBag.Title = "ViewUsers";
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2 align="center" class="bg-danger"><font color="red"><em>View Users...!</em></font></h2><br /><br />
+<div class="container">
+    <fieldset>
+        <table>
+    <tr>
+        <th>
+           <font size="3" color="green"><strong>UserName</strong></font>
+        </th>
+        <th>
+            &nbsp&nbsp&nbsp&nbsp&nbsp<font size="3" color="green"><strong> Password</strong></font>
+        </th>
+        <th>
+            &nbsp&nbsp&nbsp&nbsp&nbsp <font size="3" color="green"><strong>FirstName</strong></font>
+        </th>
+        <th>
+            &nbsp&nbsp&nbsp&nbsp&nbsp <font size="3" color="green"><strong>LastName</strong></font>
+        </th>
+        <th></th>
+    </tr>
+            <br /><br />
+            @foreach (var item in Model) {
+    <tr>
+        <td>
+           &nbsp&nbsp <font size="2">@item.Username</font>
+        </td>
+        <td>
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="2"> @item.Password</font>
+        </td>
+        <td>
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="2"> @item.FirstName</font>
+        </td>
+        <td>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="2"> @item.LastName</font>
+        </td>
+        </tr>
+            }
+            </table>
+    </fieldset>
+</div>
